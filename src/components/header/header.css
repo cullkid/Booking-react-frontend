@@ -1,0 +1,24 @@
+.headerListItem.active {
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.date {
+  position: absolute;
+  z-index: 2;
+}
+
+.options {
+  z-index: 2;
+  position: absolute;
+  background-color: white;
+  color: gray;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+}
+
+.optionCounterButton:disabled {
+  cursor: not-allowed;
+}
