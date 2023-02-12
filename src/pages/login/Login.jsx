@@ -32,7 +32,7 @@ const Login = () => {
       const res = await axios.post("/auth/login", credentials);
 
       //add the login-success switch case state to run if the login is successful
-      dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
+      dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
       navigate("/");
     } catch (err) {
       dispatch({ type: "LOGIN_FAILURE", payload: err.response.data });

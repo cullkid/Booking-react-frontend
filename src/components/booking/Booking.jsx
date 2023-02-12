@@ -2,7 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { useState } from "react";
 import { FaTimesCircle } from "react-icons/fa";
-import { useLocation } from "react-router-dom";
+import { Navigate, useLocation, useNavigate } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import { SearchContext } from "../../context/searchContext";
 import axios from "axios";
@@ -11,6 +11,7 @@ const Booking = ({ setOpen, hotelId }) => {
   const [selectedRooms, setSelectedRooms] = useState([]);
 
   const location = useLocation();
+  const navigate = useNavigate();
 
   // const id = location.pathname.split("/")[2];
 
@@ -45,7 +46,7 @@ const Booking = ({ setOpen, hotelId }) => {
     //use roomnumber(func) to check if the 'some' roomnumber in
     //the db are unavailable, then return/include its duration booked
     const isFound = roomNumber.unavailableDates.some((date) =>
-      alldates.includes(new Date(date).getTime)
+      alldates.includes(new Date(date).getTime())
     );
 
     return !isFound; //because if found then the room is unavailable
@@ -75,6 +76,8 @@ const Booking = ({ setOpen, hotelId }) => {
           return res.data;
         })
       );
+      setOpen(false);
+      navigate("/");
     } catch (err) {}
   };
 
