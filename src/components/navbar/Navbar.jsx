@@ -9,7 +9,7 @@ const Navbar = () => {
   const { user } = useContext(AuthContext); //import user from authcontext and used to hide the login and signin buttom when user login
 
   return (
-    <div className="h-[50px] bg-[#003580] flex justify-center">
+    <div className="h-[50px] bg-[#585356] flex justify-center">
       <div className="md:w-full md:max-w-[1024px] w-[450px] text-white flex items-center justify-between">
         <Link to="/" className="font-bold">
           Eze's booking

@@ -62,7 +62,7 @@ const Header = ({ type }) => {
   const { user } = useContext(AuthContext); //import user from authcontext and used to hide the login and signin buttom when user login
 
   return (
-    <div className="text-white flex justify-center relative bg-[#003580]">
+    <div className="text-white flex justify-center relative bg-[#585356]">
       <div
         className={
           type === "list"
