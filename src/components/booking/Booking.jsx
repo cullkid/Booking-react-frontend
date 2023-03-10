@@ -77,7 +77,7 @@ const Booking = ({ setOpen, hotelId }) => {
         })
       );
       setOpen(false);
-      navigate("/");
+      navigate("/message");
     } catch (err) {}
   };
 
@@ -90,7 +90,7 @@ const Booking = ({ setOpen, hotelId }) => {
         />
         <span className="text-[15px] font-bold">Select your rooms:</span>
         {data.map((item) => (
-          <div className="text-[12px] flex items-center gap-[50px] p-[20px]">
+          <div className="text-[12px] flex items-center gap-[50px] p-[10px]">
             <div>
               <p className=" font-bold">{item.title}</p>
               <p>{item.desc}</p>
@@ -121,7 +121,7 @@ const Booking = ({ setOpen, hotelId }) => {
         ))}
         <button
           onClick={handleClick}
-          className="bg-blue-700 md:w-[200px] text-white font-bold"
+          className="bg-blue-700 md:w-[200px] text-white font-bold mb-[15px]"
         >
           Reserve Now
         </button>
